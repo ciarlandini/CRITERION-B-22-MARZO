@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.1.1/dist/svgMap.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.1.1/dist/svgMap.min.css" rel="stylesheet">
+
+ <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.1.1/dist/svgMap.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.1.1/dist/svgMap.min.css" rel="stylesheet">
+
+         <html>
+
+
+  <head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h1.features {
+        text-align: center;
+        color: black;
+        background-color: chocolate;
+        color: darkred;
+        }
+
+        p.features {
+        text-align: center;
+        color: blue;
+        }
+
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: cornflowerblue;
+        }
+
+        .topnav {
+        overflow: hidden;
+        background-color: #333;
+        }
+
+        .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+
+        
+        .topnav a:hover {
+          background-color: #darkslategrey;
+          color: black;
+        }
+
+        /* Features specifically for the TOP NAVIGATION BAR */
+        .topnav a.active {
+          background-color: #118F95;
+          color: white;
+        }
+
+    </style>
+
+  </head> 
+
+  <body> 
+
+      
+      <div class="topnav">
+
+            <a class="active">Home</a>
+            <a href="markham.html">News</a>
+            
+      </div>
+     
+
+  </body> 
+</html>
+
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>The Young Developer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style type="text/css"></style>
+        <style>
+        
+</style>
+<html>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #118F95;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #118F95;
+  outline: none;
+}
+
+button {
+  background-color: #118F95;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #E6F9FA;
+}
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+  background-color: #FA210B;
+}
+
+.container {
+  padding: 16px;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: #E6F9FA;
+  padding-top: 50px;
+}
+
+.modal-content {
+  background-color: #E6F9FA;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #118F95;
+  width: 80%; 
+}
+
+hr {
+  border: 1px solid #118F95;
+  margin-bottom: 25px;
+}
+ 
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #118F95;
+}
+
+.close:hover,
+.close:focus {
+  color: #118F95;
+  cursor: pointer;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
+<body>
+
+<h2>Sign Up For Newsletters!</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">I'm In!</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up For Development Newsletters!</h1>
+      <p>Please fill in this form to create an account in order to recieve newsletters!</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Your Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Your NewPassword" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Your New Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy, and agree to recieving email notifications</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">I'm In!</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+
+var modal = document.getElementById('id01');
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
+
+</head>
+<body>
+
+
+        <body style="background-color:powderblue;">
+
+
+
+
+     
+
+     
+    </head>
+
+         <div class="header">
+
+        <h1>Toronto Development News</h1>
+        <h2>The Young Insider</h2>
+        <p style="font-family:verdana">Today's project of the day; 55 Yonge!</p>
+        
+        
+
+        </div>
+
+
+<img src="https://cdn.skyrisecities.com/sites/default/files/images/projects/44518/44518-131553.jpg" width="1500" height="1800" alt="55 Yonge">
+        <div>
+            <p style="font-family:verdana"> In the heart of Toronto’s financial district, directly adjacent to King Station on the TTC’s Yonge subway line, 55 Yonge is a landmark 66-storey residential and office tower designed by collaborating architects BDP Quadrangle and PARTISANS for H&R REIT. The building will include nearly 500 new residential units and state-of-the-art offices that will respond to Toronto’s rapid growth, while achieving a cohesive and contemporary high-rise design that makes a striking addition to Toronto’s skyline.</p>
+
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+	<script src="js/vendor/jquery.js"></script>
+
+    </body>
+</html>
+ <html>
+
+    <head>
+
+    <h2>Welcome to the website!</h2>
+
+        <style>
+
+            .flex-container {
+
+                display: flex;
+                height: 400px;
+                width: 1450px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+          align-content: space-around;
+                background-color: darkslategrey;
+            }
+
+            .flex-container > div {
+                background-color: dodgerblue;
+                margin: 10px;
+                padding: 20px;
+                font-size: 25px;
+            }
+        </style>
+    </head>
+
+
+    <body>
+
+        <div class="flex-container">
+            <div> This site is targeted to high school students and hopes to have an impact on them. This impact is to encourage them to explore the world of sustainable cities, communities and networks. By 2030, 6 in 10 people will live in urban areas. That number is only expected to grow. The challenges that already exist are amplified over larger amounts of time.  In order to “Make cities and human settlements inclusive, safe, resilient, and sustainable” by 2030, we need educated leaders to make decisions that put others first. Creating a site with a great impact like will hopefully be crucial actor, inspiring kids to take on their passions regarding to the topic, and further inspiring new passions. You are the leaders!
+
+
+</div>
+        </div>
+
+    </body>
+</html>
+<html>
+  <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <title>Development Forum</title>
+  </head>
+  <body>
+    <br>
+    <h3>Development Forum Link Below!!</h3>
+
+   <a class="muut" href="https://muut.com/youngdevelopers/">Development Forum</a>
+   <script src="//cdn.muut.com/1/moot.min.js"></script>
+  </body>
+</html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+</style>
+</head>
+<body>
+
+<h2>Our Goals</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="https://www.un.org/esa/ffd/ffddialogue/images/E_SDG%20goals_icons-individual-rgb-09.png" alt="9" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://www.un.org/esa/ffd/ffddialogue/images/E_SDG%20goals_icons-individual-rgb-11.png" alt="11" style="width:100%">
+  </div>
+</div>
+
+<style>
+.gallery-text {
+    float: left;
+    width: 48%;
+    margin: 1%;
+}
+.gallery-text p {
+}
+</style>
+
+<div id="gallery-text">
+    <div class="gallery-text">
+        <h3> Goal 9</h3>
+        <p>
+        Investment in infrastructure and innovation are crucial drivers of economic growth and development. With over half the world population now living in cities, mass transport and renewable energy are becoming ever more important, as are the growth of new industries and information and communication technologies.
+
+Technological progress is also key to finding lasting solutions to both economic and environmental challenges, such as providing new jobs and promoting energy efficiency. Promoting sustainable industries, and investing in scientific research and innovation, are all important ways to facilitate sustainable development.
+
+More than 4 billion people still do not have access to the Internet, and 90 percent are from the developing world. Bridging this digital divide is crucial to ensure equal access to information and knowledge, as well as foster innovation and entrepreneurship.   
+        </p>
+    </div>
+
+    <div class="gallery-text">
+        <h3> Goal 11</h3>
+        <p> 
+
+        More than half of us  live in cities. By 2050, two-thirds of all humanity—6.5 billion people—will be urban. Sustainable development cannot be achieved without significantly transforming the way we build and manage our urban spaces.
+
+The rapid growth of cities—a result of rising populations and increasing migration—has led to a boom in mega-cities, especially in the developing world, and slums are becoming a more significant feature of urban life.
+
+Making cities sustainable means creating career and business opportunities, safe and affordable housing, and building resilient societies and economies. It involves investment in public transport, creating green public spaces, and improving urban planning and management in participatory and inclusive ways.
+ 
+        </p>
+    </div>  
+</div>
+
+
+
+<div id="svgMap"></div>
+<script> 
+new svgMap({
+  targetElementID: 'svgMap',
+  data: {
+    data: {
+      gdp: {
+        name: 'GDP per capita',
+        format: '{0} USD',
+        thousandSeparator: ',',
+        thresholdMax: 50000,
+        thresholdMin: 1000
+      },
+      change: {
+        name: 'Population Growth Rate',
+        format: '{0} %'
+      }
+    },
+    applyData: 'gdp',
+    values: {
+      AF: {gdp: 587, change: 2.3},
+      AL: {gdp: 4583, change: 1.9},
+      DZ: {gdp: 4293, change: -0.4},
+      CA: {gdp: 46195, change: 1.4},
+      CN: {gdp: 10262, change: 0.4},
+      US: {gdp: 65298, change: 0.5}
+      // ...
+    }
+  }
+});
+</script>
+<h4>Comparative Interactive Map</h3>
+
+</script>
+</body>
+</html>
+
+
+
