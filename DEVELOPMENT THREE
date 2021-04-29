@@ -1,0 +1,282 @@
+html>
+
+
+
+  <head> 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <!-- This is needed for my interactive Toronto Map -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+       <!-- This is needed for my interactive Toronto Map -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <!-- This is needed for my bar chart -->
+
+
+
+
+
+<body>
+
+    <style>
+    		 #mapid { height: 1000px; }
+/*This controls the height of my interactive map! */
+
+
+/*These following attributes create the navigation system */
+
+        h1.features {
+        text-align: center;
+        color: red;
+        background-color: dodgerblue;
+        color: goldenrod;
+        }
+
+
+        p.features {
+        text-align: center;
+        color: blue;
+        }
+
+
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: lightblue;
+        }
+
+
+        .topnav {
+        overflow: hidden;
+        background-color: #118F95;
+        }
+
+
+        .topnav a {
+        float: left;
+        color: #E6F9FA;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+
+        
+
+        .topnav a:hover {
+          background-color: #E6F9FA;
+          color: black;
+        }
+
+
+        .topnav a.active {
+          background-color: #E6F9FA;
+          color: white;
+        }
+
+    </style>
+
+  </head> 
+
+  <body> 
+
+
+
+      
+      <div class="topnav">
+
+            <a href="DEVELOPMENT.html">Home</a>
+          <a href="DEVELOPMENT2.html">News</a>
+          <a class="active">Stats</a>
+        
+        <img src="http://maps.library.utoronto.ca/datapub/digital/1949_official_plan/1949_official_plan_008a.jpg" width="1500" height="1800" alt="map">
+        <div>
+      </div>
+
+ <head>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Makes up the background and spacing */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #118F95;
+}
+
+/*Controls the size and spacing of my header */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: #E6F9FA;
+}
+
+/* Creates two columns where one of which takes up all of the page, with a sidebar comprised of none of the page unlike last time! */
+/* Utilised column */
+.leftcolumn {   
+  float: left;
+  width: 100%;
+}
+
+/* Non-utilised */
+.rightcolumn {
+  float: left;
+  width: 0%;
+  padding-left: 20px;
+}
+
+
+/* Creates individualized plates for each article */
+.card {
+   background-color: #E6F9FA;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- This creates the title of the page! -->
+
+<div class="header">
+  <h2 style="font-family:verdana"> What Can I Do?</h2>
+</div>
+
+<!-- This creates the array of cards and articles! -->
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2 style="font-family:verdana">Community Meetings: Outreach</h2>
+      <h5 style="font-family:verdana">As our city grows, outreach is important!.</h5>
+     <img src="https://www-cdn.icef.com/wp-content/uploads/2021/02/icef-toronto-mobile.png?x31324" style="height:800px;""width:3000px">
+      <p style="font-family:verdana">When coming to make sustainable development decisions, the public is always consulted. The City Of Toronto offers near monthly meetings on these topics, and offers meetings for each specific project proposed. In order to keep up with these meetings, the official website of the city of toronto includes links to any such meetings whether the scope is specific or broad. These meets provide invaluable knowledge about how city planning works, and an inside look at just how one of the largest cities in the world steps forward into their next sustainable phases. </p>
+    </div>
+    <div class="card">
+      <h2 style="font-family:verdana">How Can Kids Get Involved In Sustainable Development?</h2>
+      <h5 style="font-family:verdana">The youth are the future leaders, so why not involve them in building their future</h5>
+      <img src=https://cecauoft.files.wordpress.com/2017/03/3-flynn-green-roof-td-2200x900_c-e1489268145474.jpg?w=3618>     
+      <p style="font-family:verdana">As our city grows, youth voices are increasingly important. For youth over 18, the City Of Toronto has created a Youth Research Team that focuses in on listening to young voices and specializes in designing for the next generation. Their main areas of focus are Schools and Education, Youth Hubs and community centres, Promotion, Engagement and Communication as well as creating ambassadors eager to make their voices heard for change. These opportunities are only set to grow and involve even younger kids with great aptitue and interest for sustainable development and creating sustainable cities and communities.</p>
+    </div>
+   
+<h2> Amount of Global High Rises By City </h2>
+<canvas id="myChart" style="width:100%;max-width:1600px"></canvas>
+
+<script>
+var xValues = ["New York City", "Toronto", "Dubai", "Seoul", "Hong Kong", "Tokyo", "Shanghai", "Chicago", "Kyiv", "London"];
+var yValues = [6107, 2456, 2064, 1665, 1343, 1330, 1234, 1233, 1207, 1129];
+var barColors = ["black", "blue","grey","green","aquamarine", "darkslategrey","red","purple","cornflowerblue","dodgerblue"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Amount of High Rises around the World"
+    }
+  }
+});
+</script>
+
+</body>
+</html>
+
+
+
+    </div>
+  </div>
+</div>
+<h2 style="font-family:verdana">Toronto Buildings Proposed/Built over 250 metres</h2>
+
+<div class="container">
+	<div id="mapid"></div>
+
+</div>
+
+<script type="text/javascript"> 
+	var mymap = L.map('mapid').setView([43.6636336, -79.4426878], 13);
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+	    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+	    maxZoom: 18,
+	    id: 'mapbox/streets-v11',
+	    tileSize: 512,
+	    zoomOffset: -1,
+	    accessToken: 'sk.eyJ1IjoiY2ZnaGprbCIsImEiOiJja255dXU2bWYwNzAzMm5ta204bHBnNzNoIn0.11Oq7QYcC59IfCnP0DxDDQ'
+	}).addTo(mymap);
+	var marker = L.marker([43.6698567,-79.3871433]).addTo(mymap);
+	var marker = L.marker([43.6436176,-79.3748038]).addTo(mymap);
+	var marker = L.marker([43.6476722,-79.3865395]).addTo(mymap);
+	var marker = L.marker([43.6474117,-79.3878841]).addTo(mymap);
+	var marker = L.marker([43.6484247,-79.3798635]).addTo(mymap);
+	var marker = L.marker([43.6484247,-79.3798635]).addTo(mymap);
+	var marker = L.marker([43.6594053,-79.3829079]).addTo(mymap);
+	var marker = L.marker([43.6587282,-79.3832537]).addTo(mymap);
+	var marker = L.marker([43.658897,-79.3824565]).addTo(mymap);
+	var marker = L.marker([43.6589325,-79.3818175]).addTo(mymap);
+	var marker = L.marker([43.6498031,-79.3803102]).addTo(mymap);
+	var marker = L.marker([43.6490463,-79.3822135]).addTo(mymap);
+	var marker = L.marker([43.6494926,-79.3794258]).addTo(mymap);
+	var marker = L.marker([43.6700066,-79.3899669]).addTo(mymap);
+	var marker = L.marker([43.669857,-79.3902725]).addTo(mymap);
+	var marker = L.marker([43.6699513,-79.3861385]).addTo(mymap);
+	var marker = L.marker([43.7059296,-79.3993691]).addTo(mymap);
+	var marker = L.marker([43.6438092,-79.3733603]).addTo(mymap);
+	var marker = L.marker([43.6450168,-79.3857643]).addTo(mymap);
+	var marker = L.marker([43.6447566,-79.3843865]).addTo(mymap);
+	var marker = L.marker([43.6424041,-79.3788551]).addTo(mymap);
+	var marker = L.marker([43.6419945,-79.3766919]).addTo(mymap);
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+
+</body>
+</html>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2 style="font-family:verdana">What Do I Do Now?</h2>
+      <h5 style="font-family:verdana">Next Steps</h5>
+     <img src=https://camdenpublicite.com/themes/camden/images/header-camden-toronto_1536.jpg style="height:800px;""width:3000px">
+      <p style="font-family:verdana">As you can see, Toronto is growing at a rate quicker than anywhere around the world. If we don't focus on building in a way that will keep our environment safe for our citizens and the land itself, we'll be in trobule. So what can I do? Educate yourself! Urban Toronto is a free website that gives you inside access on the construction from anything to parklands, skyscrapers and public transit. All accounts are free and the platform is extremely accesssible. Within their forums, many conversations lead to new information, opportunities and proposals. You are able to sign up for newsletters on our first page that will keep you up to date with all the important news, and feel free to join our forum. We are the future of this city!</p>
+
+	<a href ="gigi.ciarlandini@ucc.on.ca"> Contact Us At Our Site Email!</a><br> 
+
+
+
